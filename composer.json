@@ -1,0 +1,20 @@
+{
+    "name": "eksandral/products_api",
+    "autoload": {
+        "psr-4": {
+            "Eksandral\\ProductsApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eksandral",
+            "email": "159817688+eksandral@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3"
+    }
+}
