@@ -16,36 +16,36 @@ final class FilterTest extends TestCase
     {
         return [
             [
-                [ "category"=>"cat1", "priceLessThan"=>"1",  ],
-                static::getFilter("cat1", 1)
+                [ "category"=>"cat1", "priceLessThan"=>"80000",  ],
+                static::getFilter("cat1", 80000)
             ],
             [
-                [ "category"=>"cat1"  ],
-                static::getFilter("cat1", 0)
+                [ "category"=>"cat2"  ],
+                static::getFilter("cat2", 0)
             ],
             [
-                [ "category"=>"cat1", "priceLessThan"=>"",  ],
-                static::getFilter("cat1", 0)
+                [ "category"=>"cat3", "priceLessThan"=>"",  ],
+                static::getFilter("cat3", 0)
             ],
             [
-                [ "category"=>"cat1", "priceLessThan"=>"70",  ],
-                static::getFilter("cat1", 0)
+                [ "category"=>"cat4", "priceLessThan"=>"70",  ],
+                static::getFilter("cat4", 70)
             ],
             [
-                [ "category"=>"cat1", "priceLessThan"=>"-70",  ],
-                static::getFilter("cat1", 0)
+                [ "category"=>"cat5", "priceLessThan"=>"-70",  ],
+                static::getFilter("cat5", 0)
             ],
             [
-                [ "category"=>"cat1", "priceLessThan"=>"3", "page"=>"2" ],
-                static::getFilter("cat1", 3, 2)
+                [ "category"=>"cat6", "priceLessThan"=>"3", "page"=>"2" ],
+                static::getFilter("cat6", 3, 2)
             ],
             [
-                [ "category"=>"cat1", "priceLessThan"=>"3", "page"=>"-2" ],
-                static::getFilter("cat1", 3, 1)
+                [ "category"=>"cat7", "priceLessThan"=>"3", "page"=>"-2" ],
+                static::getFilter("cat7", 3, 1)
             ],
             [
-                [ "category"=>"cat1", "priceLessThan"=>"3", "page"=>"-2", "page_size"=>"2" ],
-                static::getFilter("cat1", 3, 1, 2)
+                [ "category"=>"cat8", "priceLessThan"=>"3", "page"=>"-2", "page_size"=>"2" ],
+                static::getFilter("cat8", 3, 1, 2)
             ],
         ];
     }

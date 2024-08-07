@@ -3,9 +3,9 @@
 namespace Eksandral\ProductsApi;
 
 class Server {
-protected array $products;
-protected array $discounts;
-protected array $responseData = [];
+    protected array $products;
+    protected array $discounts;
+    protected array $responseData = [];
 
     public function __construct()
     {
@@ -49,7 +49,7 @@ protected array $responseData = [];
         parse_str($url["query"], $query);
         $filter = Filter::fromArray($query);
         $products =  $this->getProducts($filter); 
-        
+
         $outputProducts = [];
         foreach ($products as $row){
             $price = Price::fromDiscountsAndProduct($this->discounts, $row);

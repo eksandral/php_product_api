@@ -14,7 +14,7 @@ class Filter{
     }
     public static function filterUint(string $x): int {
         $value = (int)$x;
-        return $value>=0 && $value <= static::UPPER_LIMIT?$value:0;
+        return $value>=0?$value:0;
     }
     public static function filterPage(string $x): int {
         $value = (int)$x;

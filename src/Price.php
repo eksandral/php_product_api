@@ -8,7 +8,7 @@ class Price {
     public int $finalPrice;
     public ?int $discount_percentage = null;
     public string $currency="EUR";
-    
+
     public static function getAttributes():array {
         return [
             "original"=>[Price::class,"filterUint"],
@@ -48,5 +48,5 @@ class Price {
 
     }
 
-    
+
 }
